@@ -20,6 +20,11 @@
     <link href="css/disappear.css" rel="stylesheet">
 
     <style>
+
+    #concussion{
+      font-size: 1em;
+
+    }
     body, .jumbotron{
       background-color: #000;
       margin-left:auto;
@@ -35,7 +40,7 @@
       float: right;
     }
     */
-    
+
     </style>
 
   </head>
@@ -53,9 +58,11 @@
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4", id="soccer">
+          <div id="soccer-inner">
              <img class="bigimage player" src="images/Soccer.png" />
              <div class="arrow3 disappear"><img src="images/arrow1.png" /></div>
+          </div>
         </div>
         <div class="col-md-4">
             <img class="bigimage player" id="Football" src="images/Football.png" />
@@ -65,13 +72,26 @@
            <img class="bigimage player" src="images/Basketball.png" />
            <div class="arrow1 disappear"><img src="images/arrow1.png" /></div>
         </div>
-      </div>
+
+
 
       <hr>
 
       <footer>
         <p>&copy; Safe Plays 2014</p>
       </footer>
+      <div id="concussion">
+          <h2>Concussions</h2>
+            <h3>A Concussion is a minor traumatic brain injury that may occur when the head hits an object, or a moving object strikes the head. It can affect how the brain works for a while. A concussion can lead to a bad headache, changes in alertness, or loss of consciousness.</h3>
+
+          <h2>Prevention</h2>
+            <h3>When thinking about concessions you need to first take in your age consideration because the younger you are the more likely you are to get a concussion.
+            Even though a helmet may not completely protect you from a concession wearing it correctly is a big factor. You need a helmet your size and you need it tight. To possibly prevent concussions you need to stabilize the joints in your neck with isometric exercises. Some examples are increasing flexibility in the spine, which helps you dissipate the force of impact evenly throughout the body.</h3>
+
+          <h2>Dealing With It</h3>
+            <h3>If you suffer a concussion it is a trauma to your brain, so you need to focus on rebalancing the brain. Some examples are cross crawl exercises that stimulate both sides of the brain and rebalance postural muscle function. Resting is a key factor that allows your body to heal without interference from environmental stresses. Staying hydrated will enhance circulation which is curtail in the early stages to reduce inflammation.</h3>
+
+      </div>
     </div> <!-- /container -->
 
 
@@ -81,11 +101,12 @@
     <script src="js/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-	
+
       $(document).ready(function(){
 
+        $('#concussion').addClass('disappear');
         $('.player').on('click',function(event){
-		
+
 	  //hide all the player images
           $('.player').addClass('disappear');
 	  //remove the clicked class from all the player images
@@ -93,7 +114,7 @@
 
 	  //tag the player image as clicked
           $(event.target).addClass('clicked');
-          
+
           //unhide the clicked player image
           $(event.target).removeClass('disappear');
 
@@ -101,11 +122,15 @@
           new_src = 'images/' + event.target.id + '-arrow.png';
           $(event.target).attr("src", new_src);
 
+          chtml = $("#concussion").html();
+          $("#soccer-inner").replaceWith(chtml);
+          // $(".third").removeClass('disappear');
+
    	  return false;
         });
 
       });
-	
+
     </script>
   </body>
 </html>
