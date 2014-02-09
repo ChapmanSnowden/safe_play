@@ -33,17 +33,20 @@
       width:400px;
       height:800px;
     }
-    
+
     </style>
   </head>
 
   <body>
-      
+
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="text-center container">
         <a href="../../dist/css/test.html" class="logo"><img src="../../dist/images/logo_green_700.png"></a>
+          <h2>
+            You Gotta Prepare For The Wear And Tear
+          </h2>
       </div>
     </div>
 
@@ -88,10 +91,10 @@
     <script src="../../dist/js/bootstrap.min.js"></script>
     <script>
       $(document).ready(function(){
-        $('.player').on('click',function(event){ 
+        $('.player').on('click',function(event){
           if ($(event.target).hasClass('clicked')) {
             $('.arrow1').removeClass('disappear');
-          } 
+          }
 
           $(event.target).addClass('clicked');
           $('.player').addClass('disappear');
