@@ -1,0 +1,40 @@
+h2{
+	color:#CC3333 ;
+}
+.player {
+	transition: opacity 0.8s;
+}
+
+.disappear:not(.clicked) {
+	opacity:0;
+}
+
+
+.arrow1{
+	transition: opacity 0.8s;
+	position: absolute;
+	top:400px;
+	left:325px;
+	  -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+.knee{
+	top:400px;
+	left:325px;
+}
+
+
+.ankle{
+	top:550px;
+	left:-450px;
+}
+
+.head{
+	top:0px;
+	left:-50px;
+}
+
